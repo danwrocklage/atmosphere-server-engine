@@ -1,0 +1,7 @@
+{
+  "storage.redis": {
+    "ConnectionString": "fb-redis:6379",
+    "Namespace": "a-stage"
+  },
+  "modules": ["ACore.Redis"]
+}

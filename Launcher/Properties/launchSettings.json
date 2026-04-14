@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "DevMachine.Development": {
+      "commandName": "Project",
+      "environmentVariables": { },
+      "commandLineArgs": "devmachine.development .\\data\\"
+    },
+    "Mechanics.Development": {
+      "commandName": "Project",
+      "environmentVariables": { },
+      "commandLineArgs": "mechanics.development .\\data\\"
+    },
+    "Frontend.Development": {
+      "commandName": "Project",
+      "environmentVariables": { },
+      "commandLineArgs": "frontend.development .\\data\\"
+    },
+    "Portal.Development": {
+      "commandName": "Project",
+      "environmentVariables": { },
+      "commandLineArgs": "portal.development .\\data\\"
+    },
+    "Admin.Development": {
+      "commandName": "Project",
+      "environmentVariables": { },
+      "commandLineArgs": "admin.development .\\data\\"
+    },
+    "Seed.Development": {
+      "commandName": "Project",
+      "environmentVariables": { },
+      "commandLineArgs": "seed.development .\\data\\"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+        <AssemblyName>Fb.Web.Admin.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ACore.Patching\ACore.Patching.csproj" />
+        <ProjectReference Include="..\ACore.Modules\ACore.Modules.csproj" />
+        <ProjectReference Include="..\Fb.Web.Shared\Fb.Web.Shared.csproj" />
+    </ItemGroup>
+
+</Project>

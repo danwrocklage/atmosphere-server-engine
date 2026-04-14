@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+        <AssemblyName>AGame.Time.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\AGame.Actors\AGame.Actors.csproj" />
+        <ProjectReference Include="..\ACore.Modules\ACore.Modules.csproj" />
+        <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="AGame.Time.csproj.DotSettings" />
+    </ItemGroup>
+
+</Project>

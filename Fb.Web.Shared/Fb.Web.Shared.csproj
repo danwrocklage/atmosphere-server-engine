@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ACore.Worker.Web\ACore.Worker.Web.csproj" />
+        <ProjectReference Include="..\AGame.Core\AGame.Core.csproj" />
+    </ItemGroup>
+
+</Project>

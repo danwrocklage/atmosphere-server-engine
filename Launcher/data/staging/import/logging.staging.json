@@ -1,0 +1,16 @@
+{
+  "log": {
+    "providers": {
+      "console": {
+        "type": "ConsoleProvider",
+        "minLevel": "info"
+      },
+      "logstash": {
+        "type": "LogstashProvider",
+        "url": "tcp://fb-logstash:6000",
+        "minLevel": "info"
+      }
+    }
+  },
+  "modules": ["ACore.Logging"]
+}

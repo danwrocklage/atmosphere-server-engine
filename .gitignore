@@ -1,0 +1,7 @@
+bin/
+obj/
+/Launcher/log
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/AUtils.Sil.Compiler/test/

@@ -1,0 +1,21 @@
+{
+  "log": {
+    "providers": {
+      "console": {
+        "type": "ConsoleProvider",
+        "minLevel": "debug"
+      },
+      "file": {
+        "type": "FileProvider",
+        "url": ".\\log\\server.log",
+        "minLevel": "info"
+      },
+      "logstash": {
+        "type": "LogstashProvider",
+        "url": "tcp://localhost:6000",
+        "minLevel": "debug"
+      }
+    }
+  },
+  "modules": ["ACore.Logging"]
+}

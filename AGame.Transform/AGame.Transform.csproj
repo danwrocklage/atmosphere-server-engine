@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+        <AssemblyName>AGame.Transform.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\AGame.Actors\AGame.Actors.csproj" />
+        <ProjectReference Include="..\ACore.Modules\ACore.Modules.csproj" />
+        <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+        <ProjectReference Include="..\AUtils.SpacialDatabase\AUtils.SpacialDatabase.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="AGame.Transform.csproj.DotSettings" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <AssemblyName>Fb.Frontend.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\AGame.Actors\AGame.Actors.csproj" />
+        <ProjectReference Include="..\AGame.Frontend\AGame.Frontend.csproj" />
+        <ProjectReference Include="..\AGame.Time\AGame.Time.csproj" />
+        <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+        <ProjectReference Include="..\Fb.Mechanics\Fb.Mechanics.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Fb.Frontend.csproj.DotSettings" />
+    </ItemGroup>
+
+</Project>

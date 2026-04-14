@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ACore.Application\ACore.Application.csproj" />
+      <ProjectReference Include="..\ACore.MongoDb\ACore.MongoDb.csproj" />
+      <ProjectReference Include="..\ACore.Nats\ACore.Nats.csproj" />
+      <ProjectReference Include="..\ACore.Patching\ACore.Patching.csproj" />
+      <ProjectReference Include="..\ACore.Redis\ACore.Redis.csproj" />
+      <ProjectReference Include="..\ACore.Transport\ACore.Transport.csproj" />
+      <ProjectReference Include="..\ACore.Worker.Web\ACore.Worker.Web.csproj" />
+      <ProjectReference Include="..\AGame.Core\AGame.Core.csproj" />
+      <ProjectReference Include="..\AGame.Frontend\AGame.Frontend.csproj" />
+      <ProjectReference Include="..\AGame.Time\AGame.Time.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\Fb.Mechanics\Fb.Mechanics.csproj" />
+        <ProjectReference Include="..\Fb.Frontend\Fb.Frontend.csproj" />
+        <ProjectReference Include="..\Fb.Web.Portal\Fb.Web.Portal.csproj" />
+        <ProjectReference Include="..\Fb.Web.Admin\Fb.Web.Admin.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="data\**\*.json">
+          <CopyToOutputDirectory Condition="$(ACoreBuild) != 'CONTAINER'">PreserveNewest</CopyToOutputDirectory>
+          <CopyToOutputDirectory Condition="$(ACoreBuild) == 'CONTAINER'">Never</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

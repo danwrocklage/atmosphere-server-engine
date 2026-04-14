@@ -1,0 +1,8 @@
+﻿{
+  "minio" : {
+    "endpoint": "fb-minio:9000",
+    "accessKey": "",
+    "secretKey": "",
+    "timeout": 2000
+  }
+}

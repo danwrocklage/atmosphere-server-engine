@@ -1,0 +1,15 @@
+{
+  "includes": [
+    "logging",
+    "metrics",
+    "sentry",
+    "database",
+    "messagebus",
+    "storage"
+  ],
+  "modules": [
+    "ACore.Configuration",
+    "Fb.Web.Admin", 
+    "AGame.Core"
+  ]
+}

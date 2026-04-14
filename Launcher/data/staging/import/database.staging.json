@@ -1,0 +1,7 @@
+﻿{
+  "db.mongo": {
+    "connectionString": "mongodb://fb-mongo:27017/acore-stage",
+    "timeout": 1
+  },
+  "modules": ["ACore.MongoDb"]
+}

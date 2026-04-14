@@ -1,0 +1,35 @@
+﻿{
+  "log": {
+    "providers": {
+      "console": {
+        "type": "ConsoleProvider",
+        "minLevel": "debug"
+      },
+      "file": {
+        "type": "FileProvider",
+        "url": ".\\log\\bot.log",
+        "minLevel": "info"
+      }
+    }
+  },
+  "public.api": {
+    "url": "http://localhost:5000/",
+    "timeout": 100
+  },
+  "frontend": {
+    "host": "localhost",
+    "port": 4000
+  },
+  "account": {
+    "login": "bot_client",
+    "password": "12345678",
+    "name": "Bot Client",
+    "email": "bot_client@atmosphere.engine"
+  },
+  "character": {
+    "name": "CharleyBot",
+    "morphTargets": { 
+      "Param1": 20.3
+    }
+  }
+}

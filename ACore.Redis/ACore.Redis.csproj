@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+        <AssemblyName>ACore.Redis.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ACore.Abstractions\ACore.Abstractions.csproj" />
+        <ProjectReference Include="..\ACore.Modules\ACore.Modules.csproj" />
+        <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="StackExchange.Redis" Version="2.6.96" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ACore.Redis.csproj.DotSettings" />
+    </ItemGroup>
+
+</Project>

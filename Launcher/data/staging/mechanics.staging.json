@@ -1,0 +1,16 @@
+{
+  "includes": [
+    "logging",
+    "metrics",
+    "sentry",
+    "database",
+    "messagebus",
+    "storage"
+  ],
+  "modules": [
+    "ACore.Configuration",
+    "AGame.Time",
+    "AGame.Transform",
+    "Fb.Mechanics"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "mb.nats": {
+    "connectionString": "localhost:4222",
+    "topicPrefix": "acore",
+    "reconnects": 2,
+    "timeout": 3,
+    "requestTimeout": 60
+  },
+  "modules": ["ACore.Nats"]
+}

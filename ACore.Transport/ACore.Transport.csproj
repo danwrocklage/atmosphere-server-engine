@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+        <AssemblyName>ACore.Transport.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ACore.Abstractions\ACore.Abstractions.csproj" />
+        <ProjectReference Include="..\ACore.Modules\ACore.Modules.csproj" />
+        <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+        <ProjectReference Include="..\AUtils.Sil\AUtils.Sil.csproj" />
+    </ItemGroup>
+
+</Project>

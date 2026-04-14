@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACore HTTP Api</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',function () {
+            fetch('web-routing/routes').then(response => {
+                response.json().then(json => {
+                    const container = document.getElementById('api-items');
+                    let currentType = '';
+                    for (const index in json) {
+                        const apiItem = json[index];
+                        
+                        if(currentType !== apiItem.TypeInfo) {
+                            const caption = document.createElement('div');
+                            caption.classList.add('api-group');
+                            caption.textContent = apiItem.TypeInfo.split('.').pop();
+                            container.appendChild(caption);
+                            currentType = apiItem.TypeInfo;
+                        }
+                        
+                        const element = document.createElement('div');
+                        element.classList.add('api-item');
+                        element.classList.add(apiItem.Method.toLowerCase());
+                        const method = document.createElement('span');
+                        method.classList.add('method');
+                        method.textContent = apiItem.Method;
+                        element.appendChild(method);
+                        const url = document.createElement('span');
+                        url.classList.add('url');
+                        url.textContent = apiItem.Path;
+                        element.appendChild(url);
+                        const description = document.createElement('span');
+                        description.classList.add('description');
+                        description.textContent = apiItem.Description;
+                        element.appendChild(description);
+                        container.appendChild(element);
+                    }
+                })
+            });
+            
+            fetch('web-routing/caption').then(response => {
+               response.json().then(json => {
+                   document.getElementById('api-name').textContent = json;
+                   document.title = json;
+               });
+            });
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+        
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .navbar {
+            width: 100%;
+            height: 20px;
+            padding: 20px 0;
+            color: #626262;
+            background-color: #f7f7f7;
+            border-bottom: 1px solid #d9d9d9;
+        }
+        .navbar .caption {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        
+        .wrapper {
+            padding: 10px;
+        }
+        .wrapper .container {
+            width: 90%;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 10px;
+        }
+        .api-group {
+            margin-top: 40px;
+            color: #797979;
+            font-weight: bold;
+            font-size: 19px;
+            border-bottom: 1px solid #b9b9b9;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .api-item {
+            height: 30px;
+            border-radius: 4px;
+            border: 1px solid #a8a8a8;
+            background-color: #d7d7d7;
+            color: #797979;
+            margin-bottom: 10px;
+            padding: 8px 15px 2px 15px;
+            font-size: 16px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        .api-item.get {
+            border: 1px solid #8593c1;
+            background-color: #9fafe5;
+            color: #3c4a78;
+        }
+        .api-item.post {
+            border: 1px solid #54a855;
+            background-color: #6bd66d;
+            color: #3c783d;
+        }
+        .api-item.put {
+            border: 1px solid #a89454;
+            background-color: #d6bd6b;
+            color: #786a3c;
+        }
+        .api-item.patch {
+            border: 1px solid #54a892;
+            background-color: #6bd6ba;
+            color: #3c7868;
+        }
+        .api-item.delete {
+            border: 1px solid #a85454;
+            background-color: #d66b6b;
+            color: #783c3c;
+        }
+        .api-item .method {
+            font-weight: bold;
+            margin-right: 10px;
+            display: inline-block;
+            width: 56px;
+        }
+        .api-item .url {
+            font-weight: bold;
+            margin-right: 34px;
+        }
+        .statusbar {
+            position: fixed;
+            bottom: 0;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<section class="navbar">
+    <div class="caption" id="api-name">ACore HTTP Api</div>
+</section>
+<div class="wrapper">
+    <div class="container" id="api-items"></div>
+</div>
+</body>
+</html>

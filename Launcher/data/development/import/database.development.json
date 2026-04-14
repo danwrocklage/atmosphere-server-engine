@@ -1,0 +1,7 @@
+﻿{
+  "db.mongo": {
+    "connectionString": "mongodb://localhost:27017/acore",
+    "timeout": 1
+  },
+  "modules": ["ACore.MongoDb"]
+}

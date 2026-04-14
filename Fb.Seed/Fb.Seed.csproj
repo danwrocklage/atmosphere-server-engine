@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>Fb.Seed.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ACore.Abstractions\ACore.Abstractions.csproj" />
+      <ProjectReference Include="..\ACore.Patching\ACore.Patching.csproj" />
+    </ItemGroup>
+
+</Project>

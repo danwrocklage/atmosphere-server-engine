@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+        <AssemblyName>AGame.Actors.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ACore.Abstractions\ACore.Abstractions.csproj" />
+        <ProjectReference Include="..\ACore.Modules\ACore.Modules.csproj" />
+        <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+        <ProjectReference Include="..\AUtils.MethodExec\AUtils.MethodExec.csproj" />
+        <ProjectReference Include="..\AUtils.Sil\AUtils.Sil.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MongoDB.Bson" Version="2.19.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="AGame.Actors.csproj.DotSettings" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+{
+  "includes": [
+    "logging",
+    "metrics",
+    "database",
+    "sentry",
+    "storage"
+  ],
+  "modules": [
+    "ACore.Configuration",
+    "Fb.Seed"
+  ],
+  "http.control": false
+}

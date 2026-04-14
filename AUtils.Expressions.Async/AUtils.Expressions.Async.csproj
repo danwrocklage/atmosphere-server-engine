@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <NoWarn>CS8632</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="AUtils.Expressions.Async.csproj.DotSettings" />
+    </ItemGroup>
+
+</Project>

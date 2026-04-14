@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <NoWarn>CS8632</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="AUtils.Expressions.Json.csproj.DotSettings" />
+    </ItemGroup>
+
+</Project>

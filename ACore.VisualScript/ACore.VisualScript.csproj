@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DefineConstants>$(DefineConstants);$(ACoreEnvironment);$(ACoreBuild)</DefineConstants>
+        <AssemblyName>ACore.VisualScript.Module</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ACore.Abstractions\ACore.Abstractions.csproj" />
+        <ProjectReference Include="..\ACore.Modules\ACore.Modules.csproj" />
+        <ProjectReference Include="..\AUtils.Expressions.Async\AUtils.Expressions.Async.csproj" />
+        <ProjectReference Include="..\AUtils.Expressions.Json\AUtils.Expressions.Json.csproj" />
+        <ProjectReference Include="..\AUtils.IoC\AUtils.IoC.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="ACore.VisualScript.csproj.DotSettings" />
+    </ItemGroup>
+    
+</Project>

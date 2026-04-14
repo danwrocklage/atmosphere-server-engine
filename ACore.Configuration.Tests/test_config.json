@@ -1,0 +1,7 @@
+﻿{
+  "test_section": {
+    "field1": "some test string",
+    "field2": 222
+  },
+  "test_array": ["array item 1"]
+}

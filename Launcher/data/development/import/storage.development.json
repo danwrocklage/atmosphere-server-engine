@@ -1,0 +1,7 @@
+{
+  "storage.redis": {
+    "ConnectionString": "localhost:6379",
+    "Namespace": "a-dev"
+  },
+  "modules": ["ACore.Redis"]
+}
