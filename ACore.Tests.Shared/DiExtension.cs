@@ -1,6 +1,7 @@
 ﻿using ACore.Abstractions;
 using ACore.Abstractions.Database;
 using ACore.Abstractions.Logging;
+using ACore.Abstractions.Rpc;
 using ACore.Abstractions.Telemetry;
 using ACore.Tests.Shared.Database;
 using AUtils.IoC;
@@ -16,6 +17,7 @@ public static class DiExtension
         builder.Transient<FakeMetrics, ICellMetrics>();
         builder.Transient<FakeEnvironment, ICellEnvironment>();
         builder.Singleton<FakeDatabase, FakeDatabase, IDatabase>();
+        builder.Transient<FakeRpc, IRpc>();
         builder.Register(x => x.For(typeof(TypedFakeLogger<>)).As(typeof(ILogger<>)));
     }
 }

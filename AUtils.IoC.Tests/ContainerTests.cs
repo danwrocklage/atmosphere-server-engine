@@ -142,7 +142,7 @@ public class ContainerTests
     public void FailResolveTest()
     {
         var container = BuildContainer();
-        Assert.Throws<ArgumentException>(() => container.Resolve<NonContainedClass>());
+        Assert.Throws<ResolveException>(() => container.Resolve<NonContainedClass>());
     }
     
     [Fact]
